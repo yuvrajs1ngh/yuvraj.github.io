@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications | Balsant's Homepage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        /* Navigation Bar */
+        header {
+            background-color: #2E86C1; /* Same color as the name */
+            padding: 20px 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #1A5276;
+        }
+
+        /* Active/Selected state */
+        nav ul li a.active {
+            background-color: #1A5276 !important; /* Active button color */
+        }
+
+        /* Content Container */
+        .container {
+            width: 100%;
+            max-width: 900px;
+            margin: 80px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        /* Headings and Publication Blocks */
+        .container h1 {
+            color: #2E86C1;
+            text-align: center;
+        }
+
+        .publication {
+            background-color: #f9f9f9;
+            padding: 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        .publication h3 {
+            color: #2E86C1;
+            margin-bottom: 10px;
+        }
+
+        .publication p {
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .publication p i {
+            font-size: 14px;
+            color: #777;
+        }
+
+        .publication p.authors {
+            font-weight: bold;
+        }
+
+        .publication p.source {
+            font-style: italic;
+            color: #555;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/" id="aboutLink">About</a></li>
+                <li><a href="projects.html" id="projectsLink">Projects</a></li>
+                <li><a href="sports.html" id="sportsLink">Sports</a></li>
+                <li><a href="updates.html" id="updatesLink">Updates</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content (Publications Page) -->
+    <div class="container">
+        <h1>Projects</h1>
+
+        <div class="projects">
+            <h3>My projects will appear here</h3>
+            <p class="source">Thanks for showing interest! <span style="font-style: italic;">(13 October 2024)</span></p>
+        </div>
+
+        
+
+    <!-- JavaScript to Set Active Class Dynamically -->
+    <script>
+        // Set active class based on the current URL
+        const currentPath = window.location.pathname;
+        const aboutLink = document.getElementById('aboutLink');
+       const projectsLink = document.getElementById('projectsLink');
+        const sportsLink = document.getElementById('sportsLink');
+
+       if (currentPath === '/' || currentPath === '/index.html') {
+            aboutLink.classList.add('active');
+        } else if (currentPath.includes('projects.html')) {
+            projectsLink.classList.add('active');
+        } else if (currentPath.includes('sports.html')) {
+            sportsLink.classList.add('active');
+        }
+    </script>
+</body>
+</html>
